@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/food-website/static/css/main.02902e86.css",
-    "main.js": "/food-website/static/js/main.2b64f12b.js",
+    "main.js": "/food-website/static/js/main.e46982e3.js",
     "static/js/488.e283fa73.chunk.js": "/food-website/static/js/488.e283fa73.chunk.js",
     "static/media/pav_bhaji.jpg": "/food-website/static/media/pav_bhaji.f497d65653c8f4910dcc.jpg",
     "static/media/butter_chicken.jpg": "/food-website/static/media/butter_chicken.c337e0a9adde683220ce.jpg",
@@ -23,11 +23,11 @@
     "static/media/chef2.jpg": "/food-website/static/media/chef2.b30a86f3a0bd478150f0.jpg",
     "index.html": "/food-website/index.html",
     "main.02902e86.css.map": "/food-website/static/css/main.02902e86.css.map",
-    "main.2b64f12b.js.map": "/food-website/static/js/main.2b64f12b.js.map",
+    "main.e46982e3.js.map": "/food-website/static/js/main.e46982e3.js.map",
     "488.e283fa73.chunk.js.map": "/food-website/static/js/488.e283fa73.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.02902e86.css",
-    "static/js/main.2b64f12b.js"
+    "static/js/main.e46982e3.js"
   ]
 }
