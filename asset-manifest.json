@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/food-website/static/css/main.02902e86.css",
+    "main.js": "/food-website/static/js/main.2b64f12b.js",
+    "static/js/488.e283fa73.chunk.js": "/food-website/static/js/488.e283fa73.chunk.js",
+    "static/media/pav_bhaji.jpg": "/food-website/static/media/pav_bhaji.f497d65653c8f4910dcc.jpg",
+    "static/media/butter_chicken.jpg": "/food-website/static/media/butter_chicken.c337e0a9adde683220ce.jpg",
+    "static/media/masala_dosa.jpg": "/food-website/static/media/masala_dosa.fd4d49ab3c7a15ffed0c.jpg",
+    "static/media/dal_tadka.jpg": "/food-website/static/media/dal_tadka.7fd8d52ea6c4b2020144.jpg",
+    "static/media/samosa.jpg": "/food-website/static/media/samosa.10704a664e2dc86a4857.jpg",
+    "static/media/pani_puri.jpg": "/food-website/static/media/pani_puri.d49d75200140bdb59770.jpg",
+    "static/media/chole_bhature.jpg": "/food-website/static/media/chole_bhature.9cbab986c3007ff2ad90.jpg",
+    "static/media/paneer_tikka.jpg": "/food-website/static/media/paneer_tikka.909db4bfb5e9fafca1ef.jpg",
+    "static/media/pizza.jpg": "/food-website/static/media/pizza.08e054ad504875c825f5.jpg",
+    "static/media/rogan_josh.jpg": "/food-website/static/media/rogan_josh.4f2893db09825d73b9fa.jpg",
+    "static/media/burger.jpg": "/food-website/static/media/burger.0f5f19a90e97047e5d87.jpg",
+    "static/media/restro.jpg": "/food-website/static/media/restro.695ccd7b06556827acab.jpg",
+    "static/media/vada_pav.jpg": "/food-website/static/media/vada_pav.771610ea2794ac4c5925.jpg",
+    "static/media/aloo_paratha.jpg": "/food-website/static/media/aloo_paratha.288dd49aa4bc4949f9f3.jpg",
+    "static/media/tandoori_chicken.jpg": "/food-website/static/media/tandoori_chicken.c16672d92acc162d55a4.jpg",
+    "static/media/biryani.jpg": "/food-website/static/media/biryani.1928ec6b1dbe3b24c8b9.jpg",
+    "static/media/chef1.jpg": "/food-website/static/media/chef1.58c22732b735284e968c.jpg",
+    "static/media/chef2.jpg": "/food-website/static/media/chef2.b30a86f3a0bd478150f0.jpg",
+    "index.html": "/food-website/index.html",
+    "main.02902e86.css.map": "/food-website/static/css/main.02902e86.css.map",
+    "main.2b64f12b.js.map": "/food-website/static/js/main.2b64f12b.js.map",
+    "488.e283fa73.chunk.js.map": "/food-website/static/js/488.e283fa73.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.02902e86.css",
+    "static/js/main.2b64f12b.js"
+  ]
+}
