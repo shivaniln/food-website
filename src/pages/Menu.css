@@ -1,0 +1,100 @@
+/* Menu.css */
+
+/* General styling for the menu page */
+.menu-page {
+  padding: 2rem;
+  background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+}
+
+.menu-page h1 {
+  text-align: center;
+  font-size: 3rem;
+  color: #2c3e50;
+  margin-bottom: 2rem;
+}
+
+/* Style for the container of all food items */
+.menu-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 0 1rem;
+}
+
+/* Card style for each food item */
+.food-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.food-card:hover {
+  transform: translateY(-5px);  /* Slight lift effect on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.food-card h3 {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.food-card p {
+  font-size: 1.2rem;
+  color: #7f8c8d;
+}
+
+.food-card p strong {
+  font-weight: bold;
+  color: #e67e22;  /* Orange color for prices */
+}
+
+/* Style for the image */
+.food-image {
+  width: 100%;
+  height: 200px; /* Adjust the height based on your preference */
+  object-fit: cover; /* Ensures image fits within the box without distortion */
+  border-radius: 8px;
+  margin-bottom: 1rem; /* Space between image and text */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .menu-page h1 {
+    font-size: 2.5rem;
+  }
+
+  .menu-items {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .food-card {
+    padding: 1.2rem;
+  }
+
+  .food-image {
+    height: 180px; /* Adjust image height for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-page h1 {
+    font-size: 2rem;
+  }
+
+  .menu-items {
+    grid-template-columns: 1fr;
+  }
+
+  .food-card {
+    padding: 1rem;
+  }
+
+  .food-image {
+    height: 150px; /* Adjust image height further for very small screens */
+  }
+}
