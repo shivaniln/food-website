@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Menu.css';
 
 // Corrected paths to the images
@@ -18,39 +18,74 @@ import tandooriChickenImage from '../image/tandoori_chicken.jpg';
 import pavBhajiImage from '../image/pav_bhaji.jpg';
 import paniPuriImage from '../image/pani_puri.jpg';
 
-// Food items with imported images
-const foodItems = [
-  { name: 'Pizza', description: 'Cheese and tomato pizza with a crispy base', price: 499, image: pizzaImage },
-  { name: 'Burger', description: 'A juicy burger with lettuce, tomato, and cheese', price: 199, image: burgerImage },
-  { name: 'Biryani', description: 'Aromatic rice cooked with spices and marinated chicken', price: 399, image: biryaniImage },
-  { name: 'Butter Chicken', description: 'Tender chicken cooked in a rich, creamy tomato sauce', price: 350, image: butterChickenImage },
-  { name: 'Masala Dosa', description: 'Crispy dosa filled with spiced potatoes and served with chutneys', price: 120, image: masalaDosaImage },
-  { name: 'Paneer Tikka', description: 'Grilled paneer marinated in spices, served with mint chutney', price: 220, image: paneerTikkaImage },
-  { name: 'Chole Bhature', description: 'Spicy chickpeas served with deep-fried bread', price: 180, image: choleBhatureImage },
-  { name: 'Aloo Paratha', description: 'Stuffed flatbread with spiced mashed potatoes', price: 150, image: alooParathaImage },
-  { name: 'Dal Tadka', description: 'Lentils cooked with aromatic spices and tempered with ghee', price: 100, image: dalTadkaImage },
-  { name: 'Rogan Josh', description: 'Slow-cooked lamb in a spicy red gravy', price: 450, image: roganJoshImage },
-  { name: 'Vada Pav', description: 'Spicy potato fritter served in a pav bun with chutneys', price: 50, image: vadaPavImage },
-  { name: 'Samosa', description: 'Fried pastry filled with spiced potatoes and peas', price: 30, image: samosaImage },
-  { name: 'Tandoori Chicken', description: 'Chicken marinated in yogurt and spices, grilled to perfection', price: 350, image: tandooriChickenImage },
-  { name: 'Pav Bhaji', description: 'A spicy vegetable mash served with buttered bread', price: 120, image: pavBhajiImage },
-  { name: 'Pani Puri', description: 'Crispy puris filled with spicy tamarind water and potatoes', price: 70, image: paniPuriImage },
+// Initial food items
+const initialFoodItems = [
+  { id: 1, name: 'Pizza', description: 'Cheese and tomato pizza with a crispy base', price: 499, image: pizzaImage },
+  { id: 2, name: 'Burger', description: 'A juicy burger with lettuce, tomato, and cheese', price: 199, image: burgerImage },
+  { id: 3, name: 'Biryani', description: 'Aromatic rice cooked with spices and marinated chicken', price: 399, image: biryaniImage },
+  { id: 4, name: 'Butter Chicken', description: 'Tender chicken cooked in a rich, creamy tomato sauce', price: 350, image: butterChickenImage },
+  { id: 5, name: 'Masala Dosa', description: 'Crispy dosa filled with spiced potatoes and served with chutneys', price: 120, image: masalaDosaImage },
+  { id: 6, name: 'Paneer Tikka', description: 'Grilled paneer marinated in spices, served with mint chutney', price: 220, image: paneerTikkaImage },
+  { id: 7, name: 'Chole Bhature', description: 'Spicy chickpeas served with deep-fried bread', price: 180, image: choleBhatureImage },
+  { id: 8, name: 'Aloo Paratha', description: 'Stuffed flatbread with spiced mashed potatoes', price: 150, image: alooParathaImage },
+  { id: 9, name: 'Dal Tadka', description: 'Lentils cooked with aromatic spices and tempered with ghee', price: 100, image: dalTadkaImage },
+  { id: 10, name: 'Rogan Josh', description: 'Slow-cooked lamb in a spicy red gravy', price: 450, image: roganJoshImage },
+  { id: 11, name: 'Vada Pav', description: 'Spicy potato fritter served in a pav bun with chutneys', price: 50, image: vadaPavImage },
+  { id: 12, name: 'Samosa', description: 'Fried pastry filled with spiced potatoes and peas', price: 30, image: samosaImage },
+  { id: 13, name: 'Tandoori Chicken', description: 'Chicken marinated in yogurt and spices, grilled to perfection', price: 350, image: tandooriChickenImage },
+  { id: 14, name: 'Pav Bhaji', description: 'A spicy vegetable mash served with buttered bread', price: 120, image: pavBhajiImage },
+  { id: 15, name: 'Pani Puri', description: 'Crispy puris filled with spicy tamarind water and potatoes', price: 70, image: paniPuriImage },
 ];
 
 const Menu = () => {
+  const [foodItems, setFoodItems] = useState(initialFoodItems);
+  const [searchQuery, setSearchQuery] = useState('');
+
+  // Handle the search input
+  const handleSearch = (event) => {
+    setSearchQuery(event.target.value.toLowerCase()); // Make search case-insensitive
+  };
+
+  // Filter the food items based on the search query
+  const filteredFoodItems = foodItems.filter(item => 
+    item.name.toLowerCase().includes(searchQuery) || 
+    item.description.toLowerCase().includes(searchQuery)
+  );
+
   return (
     <div className="menu-page">
       <h1>Menu - Sauvage</h1>
+      
+      {/* Search Bar */}
+      <input
+        type="text"
+        placeholder="Search food items..."
+        value={searchQuery}
+        onChange={handleSearch}
+        className="search-bar"
+      />
+      
       <div className="menu-items">
-        {foodItems.map((item, index) => (
-          <div key={index} className="food-card">
-            <img src={item.image} alt={item.name} className="food-image" />
-            <h3>{item.name}</h3>
-            <p>{item.description}</p>
-            <p><strong>Price:</strong> ₹{item.price}</p>
-          </div>
-        ))}
+        {filteredFoodItems.length > 0 ? (
+          filteredFoodItems.map((item) => (
+            <div key={item.id} className="food-card">
+              <img src={item.image} alt={item.name} className="food-image" />
+              <h3>{item.name}</h3>
+              <p>{item.description}</p>
+              <p><strong>Price:</strong> ₹{item.price}</p>
+
+              {/* CRUD Buttons */}
+              <button onClick={() => updateFoodItem(item.id)}>Update Price</button>
+              <button onClick={() => deleteFoodItem(item.id)}>Delete</button>
+            </div>
+          ))
+        ) : (
+          <p>No matching items found</p> // Message when no results match
+        )}
       </div>
+
+      {/* Add New Food Item Button */}
+      <button onClick={addFoodItem}>Add New Food Item</button>
     </div>
   );
 };
