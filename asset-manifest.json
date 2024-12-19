@@ -1,8 +1,7 @@
 {
   "files": {
-    "main.css": "/food-website/static/css/main.02902e86.css",
-    "main.js": "/food-website/static/js/main.e46982e3.js",
-    "static/js/488.e283fa73.chunk.js": "/food-website/static/js/488.e283fa73.chunk.js",
+    "main.css": "/food-website/static/css/main.74a2330d.css",
+    "main.js": "/food-website/static/js/main.e8a50257.js",
     "static/media/pav_bhaji.jpg": "/food-website/static/media/pav_bhaji.f497d65653c8f4910dcc.jpg",
     "static/media/butter_chicken.jpg": "/food-website/static/media/butter_chicken.c337e0a9adde683220ce.jpg",
     "static/media/masala_dosa.jpg": "/food-website/static/media/masala_dosa.fd4d49ab3c7a15ffed0c.jpg",
@@ -22,12 +21,11 @@
     "static/media/chef1.jpg": "/food-website/static/media/chef1.58c22732b735284e968c.jpg",
     "static/media/chef2.jpg": "/food-website/static/media/chef2.b30a86f3a0bd478150f0.jpg",
     "index.html": "/food-website/index.html",
-    "main.02902e86.css.map": "/food-website/static/css/main.02902e86.css.map",
-    "main.e46982e3.js.map": "/food-website/static/js/main.e46982e3.js.map",
-    "488.e283fa73.chunk.js.map": "/food-website/static/js/488.e283fa73.chunk.js.map"
+    "main.74a2330d.css.map": "/food-website/static/css/main.74a2330d.css.map",
+    "main.e8a50257.js.map": "/food-website/static/js/main.e8a50257.js.map"
   },
   "entrypoints": [
-    "static/css/main.02902e86.css",
-    "static/js/main.e46982e3.js"
+    "static/css/main.74a2330d.css",
+    "static/js/main.e8a50257.js"
   ]
 }
