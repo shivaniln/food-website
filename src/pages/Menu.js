@@ -39,53 +39,55 @@ const initialFoodItems = [
 
 const Menu = () => {
   const [foodItems, setFoodItems] = useState(initialFoodItems);
-  const [searchQuery, setSearchQuery] = useState('');
 
-  // Handle the search input
-  const handleSearch = (event) => {
-    setSearchQuery(event.target.value.toLowerCase()); // Make search case-insensitive
+  // Create - Add a new food item
+  const addFoodItem = () => {
+    const newFoodItem = {
+      id: foodItems.length + 1,
+      name: 'New Dish',
+      description: 'A new delicious dish!',
+      price: 200,
+      image: pizzaImage, // You can add a default image
+    };
+    setFoodItems([...foodItems, newFoodItem]);
   };
 
-  // Filter the food items based on the search query
-  const filteredFoodItems = foodItems.filter(item => 
-    item.name.toLowerCase().includes(searchQuery) || 
-    item.description.toLowerCase().includes(searchQuery)
-  );
+  // Update - Edit a food item
+  const updateFoodItem = (id) => {
+    const updatedItems = foodItems.map(item =>
+      item.id === id ? { ...item, price: item.price + 10 } : item
+    );
+    setFoodItems(updatedItems);
+  };
+
+  // Delete - Remove a food item
+  const deleteFoodItem = (id) => {
+    const filteredItems = foodItems.filter(item => item.id !== id);
+    setFoodItems(filteredItems);
+  };
 
   return (
     <div className="menu-page">
       <h1>Menu - Sauvage</h1>
-      
-      {/* Search Bar */}
-      <input
-        type="text"
-        placeholder="Search food items..."
-        value={searchQuery}
-        onChange={handleSearch}
-        className="search-bar"
-      />
-      
       <div className="menu-items">
-        {filteredFoodItems.length > 0 ? (
-          filteredFoodItems.map((item) => (
-            <div key={item.id} className="food-card">
-              <img src={item.image} alt={item.name} className="food-image" />
-              <h3>{item.name}</h3>
-              <p>{item.description}</p>
-              <p><strong>Price:</strong> ₹{item.price}</p>
+        {foodItems.map((item) => (
+          <div key={item.id} className="food-card">
+            <img src={item.image} alt={item.name} className="food-image" />
+            <h3>{item.name}</h3>
+            <p>{item.description}</p>
+            <p><strong>Price:</strong> ₹{item.price}</p>
 
-              {/* CRUD Buttons */}
+            {/* CRUD Buttons */}
+            <div className="food-card-buttons">
               <button onClick={() => updateFoodItem(item.id)}>Update Price</button>
               <button onClick={() => deleteFoodItem(item.id)}>Delete</button>
             </div>
-          ))
-        ) : (
-          <p>No matching items found</p> // Message when no results match
-        )}
+          </div>
+        ))}
       </div>
 
       {/* Add New Food Item Button */}
-      <button onClick={addFoodItem}>Add New Food Item</button>
+      <button className="add-food-btn" onClick={addFoodItem}>Add New Food Item</button>
     </div>
   );
 };

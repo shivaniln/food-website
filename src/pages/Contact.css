@@ -1,37 +1,71 @@
+/* General styling for the contact form */
 .contact-container {
-    font-family: 'Arial', sans-serif;
-    padding: 20px;
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    margin: 0 auto;
-  }
-  
-  input, textarea {
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .submit-button {
-    background-color: #ff6347;
-    color: white;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  
-  .submit-button:hover {
-    background-color: #ff4500;
-  }
-/* src/pages/Contact.css */
-.contact-page {
-    padding: 20px;
-    background-color: #f8f8f8;
-  }
-    
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+  background-color: #f1f1f1;
+  max-width: 400px;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+input, textarea {
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+textarea {
+  resize: vertical;
+  height: 150px;
+}
+
+.submit-button {
+  background-color: #2a3a1f;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.submit-button:hover {
+  background-color: #ff4500;
+}
+
+/* Styling for the contact information section */
+.contact-info {
+  margin-top: 2rem;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.contact-info h3 {
+  text-align: center;
+  color: #2980b9;
+  font-size: 1.5rem;
+}
+
+.contact-info p {
+  text-align: center;
+  font-size: 1rem;
+  color: #7f8c8d;
+}

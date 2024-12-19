@@ -11,7 +11,7 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert('Thank you for your message!');
+    alert('Thank you for your message! We will get back to you soon.');
     setFormData({ name: '', email: '', message: '' });
   };
 
@@ -44,9 +44,15 @@ const Contact = () => {
         />
         <button type="submit" className="submit-button">Send Message</button>
       </form>
+      
+      <div className="contact-info">
+        <h3>Our Contact Information</h3>
+        <p>Phone: +91 9876543210</p>
+        <p>Email: contact@sauvage.com</p>
+        <p>Address: 123, Street No. 5, New Delhi, India</p>
+      </div>
     </div>
   );
 };
 
 export default Contact;
-
